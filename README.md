@@ -1,2 +1,501 @@
-# TechNova-Solutions
-TechNova Solutions official website
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions | Web • AI • Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        /* Custom scrollbar for better feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c7c7c7;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+<!-- Navigation -->
+<nav class="glass-nav fixed w-full z-50 border-b border-slate-200 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <div class="bg-indigo-600 text-white p-2 rounded-lg transform group-hover:rotate-12 transition-transform">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+                TechNova
+            </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+            <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
+            <a href="#services" class="hover:text-indigo-600 transition-colors">Services</a>
+            <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+            <a href="#contact" class="px-5 py-2.5 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200">
+                Get Started
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-indigo-600 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-20 shadow-xl">
+        <div class="flex flex-col p-6 space-y-4 font-medium text-slate-600">
+            <a href="#home" class="mobile-link hover:text-indigo-600">Home</a>
+            <a href="#services" class="mobile-link hover:text-indigo-600">Services</a>
+            <a href="#projects" class="mobile-link hover:text-indigo-600">Projects</a>
+            <a href="#contact" class="mobile-link hover:text-indigo-600">Contact</a>
+            <hr class="border-slate-100">
+            <a href="#contact" class="mobile-link text-center w-full py-3 bg-indigo-50 text-indigo-700 rounded-lg font-semibold">
+                Hire Us
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with Canvas -->
+<section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+    <!-- Canvas Background -->
+    <canvas id="tech-canvas" class="absolute inset-0 w-full h-full z-0 opacity-40"></canvas>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-sm font-medium mb-6 animate-fade-in-up">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            </span>
+            Innovating the Future
+        </div>
+
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 max-w-4xl mx-auto">
+            Intelligent Solutions for the <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-500">Digital Age</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+            We engineer high-performance websites, complex dashboard systems, and cutting-edge AI automation tools to scale your business.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#contact" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 hover:-translate-y-1 w-full sm:w-auto">
+                Start Your Project
+            </a>
+            <a href="#projects" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center gap-2 w-full sm:w-auto justify-center group">
+                View Work <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <!-- Tech Stack Logos (Mockup) -->
+        <div class="mt-16 pt-8 border-t border-slate-100">
+            <p class="text-sm text-slate-400 font-medium mb-6 uppercase tracking-wider">Powered by Modern Tech</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Simple text representation for logos to keep it single file -->
+                <span class="text-xl font-bold flex items-center gap-2"><i data-lucide="code-2" class="w-6 h-6"></i> Front-End</span>
+                <span class="text-xl font-bold flex items-center gap-2"><i data-lucide="database" class="w-6 h-6"></i> Back-End</span>
+                <span class="text-xl font-bold flex items-center gap-2"><i data-lucide="cpu" class="w-6 h-6"></i> TensorFlow</span>
+                <span class="text-xl font-bold flex items-center gap-2"><i data-lucide="cloud" class="w-6 h-6"></i> AWS</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-2">What We Do</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Comprehensive Tech Services</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="layout" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3 text-slate-900">Web Development</h4>
+                <p class="text-slate-500 leading-relaxed mb-4">
+                    High-performance, responsive websites built with modern frameworks. optimized for SEO and conversion.
+                </p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> React & Next.js</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> HTML/CSS/JS</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Progressive Web Apps</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                    <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3 text-slate-900">Dashboard Systems</h4>
+                <p class="text-slate-500 leading-relaxed mb-4">
+                    Custom admin panels and data visualization tools to manage your business operations efficiently.
+                </p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Real-time Analytics</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Role-based Access</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <i data-lucide="bot" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3 text-slate-900">AI Automation</h4>
+                <p class="text-slate-500 leading-relaxed mb-4">
+                    Leverage Machine Learning to automate repetitive tasks and gain predictive insights from your data.
+                </p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> NLP & Chatbots</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Computer Vision</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Project -->
+<section id="projects" class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-2">Case Study</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Featured Innovation</h3>
+            </div>
+            <a href="#" class="hidden md:flex items-center gap-2 text-indigo-600 font-medium hover:text-indigo-800 transition-colors">
+                View all projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+
+        <div class="bg-gradient-to-br from-slate-900 to-indigo-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+            <!-- Decorative circles -->
+            <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-indigo-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="order-2 md:order-1">
+                    <div class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold tracking-wide uppercase mb-4 text-indigo-200">
+                        Healthcare AI
+                    </div>
+                    <h4 class="text-3xl md:text-4xl font-bold mb-4">CancerVision AI</h4>
+                    <p class="text-indigo-100 text-lg mb-8 leading-relaxed">
+                        A revolutionary diagnostic support system that uses computer vision to detect cellular anomalies with 98% accuracy. Equipped with a real-time doctor's dashboard and patient analytics.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="flex items-center gap-2 text-sm text-indigo-200"><i data-lucide="layers" class="w-4 h-4"></i> Deep Learning</span>
+                        <span class="flex items-center gap-2 text-sm text-indigo-200"><i data-lucide="monitor" class="w-4 h-4"></i> Admin Dashboard</span>
+                        <span class="flex items-center gap-2 text-sm text-indigo-200"><i data-lucide="shield" class="w-4 h-4"></i> HIPAA Compliant</span>
+                    </div>
+
+                    <button class="bg-white text-indigo-900 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2">
+                        View Case Study <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Abstract UI Representation -->
+                <div class="order-1 md:order-2 relative transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-4 shadow-2xl">
+                        <!-- Mockup Header -->
+                        <div class="flex gap-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <!-- Mockup Body -->
+                        <div class="space-y-3">
+                            <div class="flex gap-4">
+                                <div class="w-1/3 h-24 bg-slate-700/50 rounded-lg animate-pulse"></div>
+                                <div class="w-2/3 space-y-2">
+                                    <div class="h-4 bg-slate-700/50 rounded w-3/4"></div>
+                                    <div class="h-4 bg-slate-700/50 rounded w-1/2"></div>
+                                    <div class="h-12 bg-indigo-600/20 border border-indigo-500/30 rounded mt-2 flex items-center justify-center text-indigo-300 text-xs">
+                                        Analysis Complete: High Confidence
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-24 bg-slate-700/30 rounded-lg p-3">
+                                <div class="flex items-end gap-2 h-full justify-between px-2">
+                                    <div class="w-full bg-indigo-500/40 rounded-t h-[40%]"></div>
+                                    <div class="w-full bg-indigo-500/60 rounded-t h-[70%]"></div>
+                                    <div class="w-full bg-indigo-500/80 rounded-t h-[50%]"></div>
+                                    <div class="w-full bg-indigo-500 rounded-t h-[90%]"></div>
+                                    <div class="w-full bg-indigo-500/70 rounded-t h-[60%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            <!-- Contact Info -->
+            <div class="bg-indigo-600 p-8 md:p-12 text-white md:w-2/5 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Get in touch</h3>
+                    <p class="text-indigo-100 mb-8">Ready to start your next project? We'd love to hear from you.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-indigo-300"></i>
+                            <span>technovasoultion@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-indigo-300"></i>
+                            <span>9904805088</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-indigo-300"></i>
+                            <span>Ahmedabad, Gujarat India / Remote</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex gap-4">
+                    <a href="#" class="p-2 bg-indigo-500 rounded-full hover:bg-indigo-400 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="#" class="p-2 bg-indigo-500 rounded-full hover:bg-indigo-400 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="p-8 md:p-12 md:w-3/5">
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent! We will contact you shortly.');">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+                        <input type="text" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                        <input type="email" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                        <textarea class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none h-32" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button class="w-full bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-100">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center gap-2 mb-4 text-white">
+                <i data-lucide="cpu" class="w-6 h-6 text-indigo-500"></i>
+                <span class="text-xl font-bold">TechNova</span>
+            </div>
+            <p class="max-w-xs text-sm">Empowering businesses with next-generation technology solutions.</p>
+        </div>
+        <div>
+            <h5 class="text-white font-bold mb-4">Services</h5>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">Back-End and Soultions</a></li>
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">AI Solutions</a></li>
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">Data Analytics</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-white font-bold mb-4">Company</h5>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">About Us</a></li>
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">Careers</a></li>
+                <li><a href="#" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+        &copy; 2024 TechNova Solutions. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-link');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+    });
+
+    // -----------------------------------------------------
+    // CANVAS ANIMATION (Particle Network)
+    // -----------------------------------------------------
+    const canvas = document.getElementById('tech-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width, height;
+    let particles = [];
+    
+    // Configuration
+    const particleCount = 60; // Number of nodes
+    const connectionDistance = 150; // Max distance to draw line
+    const mouseDistance = 200; // Interaction radius
+    
+    // Mouse state
+    const mouse = { x: null, y: null };
+
+    // Resize handling
+    function resize() {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+    }
+    
+    window.addEventListener('resize', resize);
+    
+    // Mouse movement
+    window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+
+    window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    // Particle Class
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 1; // Velocity X
+            this.vy = (Math.random() - 0.5) * 1; // Velocity Y
+            this.size = Math.random() * 2 + 1;
+            // Tech colors: predominantly indigo/blue
+            const colors = ['#6366f1', '#a855f7', '#3b82f6']; 
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+
+            // Mouse interaction (gentle repulsion/attraction mix)
+            if (mouse.x != null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                
+                if (distance < mouseDistance) {
+                    const forceDirectionX = dx / distance;
+                    const forceDirectionY = dy / distance;
+                    const force = (mouseDistance - distance) / mouseDistance;
+                    // Push away slightly
+                    const direction = -1; 
+                    const strength = 2;
+                    
+                    this.vx += forceDirectionX * force * direction * 0.05;
+                    this.vy += forceDirectionY * force * direction * 0.05;
+                }
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+    }
+
+    // Initialize Particles
+    function init() {
+        resize();
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    // Animation Loop
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        
+        // Update and draw particles
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            // Draw connections
+            for (let j = i; j < particles.length; j++) {
+                let dx = particles[i].x - particles[j].x;
+                let dy = particles[i].y - particles[j].y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+
+                if (distance < connectionDistance) {
+                    ctx.beginPath();
+                    // Opacity based on distance
+                    let opacity = 1 - (distance / connectionDistance);
+                    ctx.strokeStyle = `rgba(99, 102, 241, ${opacity * 0.2})`; // Indigo with opacity
+                    ctx.lineWidth = 1;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+
+    // Start
+    init();
+    animate();
+
+</script>
+</body>
+</html>
